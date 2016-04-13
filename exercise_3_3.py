@@ -18,7 +18,7 @@ X = data
 n = len(X) # number of data points
 
 # Whitening the data
-X = whiten(X)
+# X = whiten(X)
 
 # Ploting the data
 # plt.figure(1)
@@ -60,8 +60,7 @@ D = np.diag(sum(W))
 D1 = np. diag(sum(W1))
 L = D - W
 L1 = D1 - W1
-print(sum(L))
-print(sum(L1))
+
 Eig_val, Eig_vec = np.linalg.eig(L)
 Eig_val1, Eig_vec1 = np.linalg.eig(L1)
 
@@ -72,9 +71,6 @@ def sortEigen( evals, evecs ):
 
 dsorder = sortEigen(Eig_val, Eig_vec)
 dsorder1 = sortEigen(Eig_val1, Eig_vec1)
-
-# print(Eig_val[dsorder])
-# print(Eig_val1[dsorder1])
 
 plt.figure(3)
 style = [['r','b'],['--r','--b'],['-.r','-.b'],[':r',':b']]
@@ -119,9 +115,6 @@ plt.title('Spectral with A=8')
 plt.axis('equal')
 plt.plot(X[idx==0,0], X[idx==0,1], 'or')
 plt.plot(X[idx==1,0], X[idx==1,1], 'ob')
-
-
-## Comparing clustering solutions
 
 
 
