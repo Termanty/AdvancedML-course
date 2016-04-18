@@ -1,4 +1,8 @@
 *.swp
 *.csv
 *.gz
+mnist*
+train*
+__pycache__
+*~
 
